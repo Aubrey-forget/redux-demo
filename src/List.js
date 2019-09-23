@@ -20,6 +20,12 @@ class List extends Component {
     this.addItem = this.addItem.bind(this);
     this.delItem = this.delItem.bind(this);
   }
+
+  componentDidMount() {
+    const action = getList();
+    store.dispatch(action);
+  }
+
   render() {
     return (
       <ListUI
